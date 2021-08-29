@@ -39,6 +39,7 @@ const serverHandle = (req, res) => {
   req.query = qs.parse(url.split('?')[1]);
 
   getPostData(req).then((postData) => {
+    console.log('post data: ', postData);
     req.body = postData;
 
     // 处理blog路由数据
